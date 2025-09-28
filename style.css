@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    font-family: 'Roboto';
+    background-color: #1E1E1E;
+    overflow: hidden;
+}
+
+h3 {
+    color: white;
+    margin: 8px;
+}
+
+label {
+    color: #00E098;
+}
+
+input {
+    font-size: 16px;
+    padding-inline: 6px;
+}
+
+button {
+    width: 233px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background: #00E098;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+input {
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    /* border: 2px solid black; */
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    flex: 1;
+    /* border: 2px solid black; */
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 2px;
+}
+
+.signUpCard {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(100px);
+    animation: popUp 0.8s ease-out forwards;
+    will-change: transform, opacity;
+    position: relative;
+    background: radial-gradient(
+    circle at top left,
+    #4d4d4d 0%,
+    #444444 15%,
+    #3c3c3c 30%,
+    #343434 50%,
+    #2c2c2c 70%,
+    #242424 85%,
+    #2a2a2a 100%
+    );
+    padding: 20px;
+    border-radius: 8px;
+}
+   
+.glow {
+  animation: smoothGlow 3s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+
+@keyframes smoothGlow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(0, 224, 149, 0.3));
+  }
+
+  25% {
+    filter: drop-shadow(0 0 px rgba(0, 224, 149, 0.4));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 6px rgba(0, 224, 149, 0.6));
+  }
+  75% {
+    filter: drop-shadow(0 0 4px rgba(0, 224, 149, 0.4));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 2px rgba(0, 224, 149, 0.3));
+  }
+}
+
+@keyframes popUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
